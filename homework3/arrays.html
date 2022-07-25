@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+    <script>
+
+        // new Array metoduyla da array olusturabiliriz. Ancak 17. satirdaki kullanim seklinde sayisal veri taniminda hatalar olabilir.
+        // new Array (25) => bu 25 elemanlı bir array mi yoksa 25 kendisi bir array elemani mi orda sorun olabilir.
+        // var students = new Array ("Koray Kaya","Nuri Omer Polat","Ugur Yuksel");
+        var students = ["Koray Kaya", "Nuri Omer Polat","Ugur Yuksel"]; 
+        // document.getElementById("demo").innerHTML = students;
+        students[1] = "Erdinc Uzunlu"   // students arrayinin 1. indeksi erdinc uzunlu oldu.
+        // document.getElementById("demo").innerHTML = students[1];    //output: Nuri Omer Polat
+
+        // diziye yeni eleman eklemek icin;
+
+        students.push("Ali Atalay");
+        document.getElementById("demo").innerHTML = students[4] 
+        students[students.length] = "Murat Doğan"   // length ile dizinin butun elemanlarini for dongusu ile donebiliriz.
+        
+
+    </script>
+</body>
+</html>

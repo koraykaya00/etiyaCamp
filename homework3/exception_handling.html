@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hata Yakalama</title>
+</head>
+<body>
+
+    <p>Please input a number between 5 and 10:</p>
+
+    <input id="demo" type="text">       
+    <button type="button" onclick="myFunction()">Test Input</button>    //myFunction isimli fonksiyon calissin
+
+    <p id = "message"></p>
+
+    <script>
+        function myFunction(){
+            var message, x;
+            message = document.getElementById("message");
+            message.innerHTML = "";     // messega kismi dolduktan sonra bosalmasi icin bu sekilde yaziyoruz.
+            x = document.getElementById("demo").value;  //kullanicinin girdigi degeri x'e ata
+            try{
+                if(x=="") throw "is empty"; //x bossa hata yazdir.
+                if(isNaN(x)) throw "is not a number";   // x number degilse yazdir.
+                if(x > 10) throw "is too high";
+                if(x < 5) throw "is to low";
+
+            }
+
+            catch(err){
+                message.innerHTML ="Input" + err;       // catch blogu hatalari yakalar.
+            }
+            //try ve catch her ne olursa olsun calisir.
+
+            finally {
+                document.getElementById("demo").value = ""; 
+            }
+        
+        }
+    </script>
+
+    <script>
+
+    </script>
+</body>
+</html>

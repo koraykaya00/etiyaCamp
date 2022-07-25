@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        var student = "Koray Kaya";     //string ifade gösterirken "" içerisine yazmalıyız.
+        student = student.substr(1,4)   //1. karakterden itibaren 4 tane alsın.
+        var value = 10;                 //number ifade gösterirken sayısal veriyi tutmak için kullanılır.
+        value = "ali ali ali"           // value number tipinde iken kendini string tipine cevirdi
+        var student2 = student;
+        var isItTrue = true;            // boolean veri tipidir. evet-hayır, cinsiyet gibi degiskenler icin kullanılabilir.
+
+        document.getElementById("demo").innerHTML = student;
+    </script>
+</body>
+</html>

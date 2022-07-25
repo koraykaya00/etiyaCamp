@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <p>Enter a number</p>
+    <input id="numberBox" type="number" min="10" max="100" pattern="[A-Za-z]{3}">
+    <!-- pattern yerine Maxlength de kullanilabilir. -->
+    <!-- readonly: true yada false alir kullanmak icin value vermek zorundayiz -->
+
+    <button onclick="validate()">Send</button>
+    <p id="demo"></p>
+
+    <script>
+
+// validation keywords = Disabled, Readonly, Max, Min, Pattern, Required, Type, Maxlength, Novalidate
+
+        function validate()
+        {
+            var numberEntered = document.getElementById("numberBox");
+
+            if (numberEntered.checkValidity() == false) {   //checkValidity : girilen degerin kurallara uygun olup olmadigini kontrol eder.
+                document.getElementById("demo").innerHTML = numberEntered.validationMessage;
+
+                //eger hata varsa validationMessage devreye girecek
+            }
+            else {
+                document.getElementById("demo").innerHTML = "Input OK";
+            }
+        }
+    </script>
+</body>
+</html>

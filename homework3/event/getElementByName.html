@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class Name</title>
+</head>
+<body>
+    <p id="message"></p>
+
+    <input type="text" name="customerName" value="Koray Kaya">
+
+    <h1>Try It</h1>
+
+    <h1 id="tryIt">Try It</h1>
+
+    <p id="nodes">Node Value</p>
+
+    <div id="div1">
+        <p id="p1">
+            This is p1
+        </p>
+
+        <p id="p2">
+            This is p2
+        </p>
+    </div>
+
+    <script>
+        var names = document.getElementsByName("customerName"); //customerName sahip tüm elemanlari getir.
+        alert(names[0].value)
+    </script>
+</body>
+</html>
